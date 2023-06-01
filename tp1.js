@@ -48,7 +48,7 @@ function draw() {
     // draw text
 
     let windowMargins = .1*windowWidth*2;
-    let fontSize = windowHeight*0.1;
+    let fontSize = windowHeight*0.08;
     let lineSpacing = fontSize * .25;
     let maxWidth = windowWidth-windowMargins;
     
@@ -146,7 +146,7 @@ function centerPoints(centroid,numLines,currLine,ls,txtH) {
     // text should be at the bottom.
     let multiLineSpace = (numLines*txtH)+((numLines-1)*ls);
     let marginBottom = 0.2*windowHeight;
-    let offsetY = multiLineSpace+marginBottom;
+    let offsetY = multiLineSpace+(0.75*marginBottom);
 
     
     
