@@ -8,22 +8,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             body {
-                background-color:gray;
+                background-color:rgb(181, 181, 181);
                 color:black;
                 margin:1em;
-                font-size: 100px;
+                font-size: 20px;
                 text-align: center;
             }
+            table, tr, th, td {
+                border:1px gray solid;
+                border-collapse: collapse;
+            }
+            table {
+                margin:0 auto 1em auto;
+            }
+            th, td { padding: 3px 5px 3px 5px}
+            th {font-weight: normal;}
             a { color:black; text-decoration: black solid underline;}
-            a:hover {background-color: yellow;}
+            a:hover {font-style: italic;}
+            td:hover {background-color: rgb(203, 203, 143);}
         </style>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <a href="tp1.html">TP1: Speech</a>
+        <p>Tiny Projects: a repository for learning.</p>
+        <table>
+            <tr>
+                <th>undertaking</th>
+                <th>description</th>
+                <th>target</th>
+            </tr>
+            <tr>
+                <td>Accessible Design (Udemy)</td>
+                <td>accessibility basics for digital design</td>
+                <td>In-House Digital Design Guide</td>
+            </tr>
+            <tr>
+                <td>GSAP</td>
+                <td>small starter course + read through documentation</td>
+                <td>Design X Code R&D: motion studies. Built on Phos?</td>
+            </tr>
+            <tr>
+                <td><a href="tp1.html">Shapes of Language</a></td>
+                <td>poetic transcripts/subtitles</td>
+                <td>creative coding practice, multisensory design sketch</td>
+            </tr>
+        </table>
 
         <!-- <a href="garblang.html">garbage language</a><br>
         <a href="myth.html">mythologies</a> -->
