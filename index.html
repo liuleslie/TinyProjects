@@ -31,7 +31,15 @@
             div, figure, iframe { width:33vw;height:33vh; border: 3px black dotted;}
             iframe {margin-right:2em; margin-bottom: 2em}
             h3 { font-weight: normal; text-decoration: 2px black underline;}
-            
+            @media (max-width: 600px) {
+                body {
+                    margin:1em;
+                }
+                iframe {
+                    width:75vw;
+                    height:75vw;
+                }
+            }
         </style>
     </head>
     <body>
