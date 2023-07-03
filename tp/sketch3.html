@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+    <style>
+        body {margin:0}
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <script>
+        let mic;
+        function setup() {
+            let c = createCanvas(window.innerWidth,window.innerHeight);
+            c.mouseMoved(userStartAudio);
+            colorMode(RGB,255);
+            mic = new p5.AudioIn();
+            mic.start();
+        }
+
+        function draw() {
+            // clear();
+            let l = mic.getLevel();
+            let s = l*5000;
+            // strokeWeight(s);
+            stroke('black');
+            let c = color(181, 181, 181);
+            // fill(c);
+            noFill();
+            let sz = abs(mouseX-pmouseX);
+            ellipse(mouseX,mouseY,s,s);
+            // line(mouseX,mouseY,pmouseX,pmouseY);
+        }
+        function windowResized() {
+            resizeCanvas(windowWidth,windowHeight);
+        }
+        function mousePressed() {
+            clear();
+        }
+
+    </script>
+  </body>
+</html>
