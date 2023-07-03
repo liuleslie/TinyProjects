@@ -4,155 +4,36 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
+        <script></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script> -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://www.auduno.com/clmtrackr/build/clmtrackr.min.js"></script>
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            @font-face {
+              font-family: "karrik";
+              src: url("https://cdn.glitch.global/e88d212e-4ce9-46a8-8c1d-7abd92ea13d8/Karrik-Regular.woff?v=1650588487689") format("woff");
+            }
             body {
+                font-family: karrik;
                 background-color:rgb(181, 181, 181);
-                color:black;
-                margin:1em;
+                margin:2em 5em 3em 5em;
                 font-size: 18px;
-                text-align: center;
             }
-            table, tr, th, td {
-                border:1px gray solid;
-                border-collapse: collapse;
-            }
-            table, article p, ol {
-                width:60vw;
-                margin:0 auto 1em auto;
-                text-align: left;
-            }
-            th, td { padding: 3px 5px 3px 5px}
-            th {font-weight: normal;}
-            a { color:black; text-decoration: black solid underline;}
-            a:hover {font-style: italic;}
-            td:hover {background-color: rgb(203, 203, 143);}
-            article, nav {
-                border-bottom: 1px dotted lightgray;
-            }
-            h3 { font-weight: normal; }
-            #backToTop {
-                position:fixed;
-                right: 10%;
-            }
+            nav {margin-bottom:2em}
+            a { color: blue; text-decoration: none;}
+            a:hover {background-color: yellow;color:black}
+            div, figure, iframe { width:33vw; border: 3px black dotted;}
+            
         </style>
     </head>
     <body>
-        <nav id="myIndex">
-            <h3>Index</h3>
-            <ol>
-                <li><a href="#introduction">Introduction</a></li>
-            </ol>
-        </nav>
-        <button id="backToTop" type="button"><a href="#myIndex">Index</a></button>
-        <article id="introduction">
-            <h3>Tiny Projects: a repository for learning.</h3>
-            <p>My primary goal in life is to find joy in learning.</p>
-            <p>In order to survive in this world, there are some skills I will have to learn that may seem boring.
-                 The goal of Tiny Projects (TP) is to make anything (and everything) interesting to me.
-            </p>
-            <p>A part of me is interested in gamifying my life (I guess I am beyond irony at this point) to maximize pleasure.
-                 TP includes the following categories:
-            </p>
-            <ol>
-                <li>Creative
-                    <ul>
-                        <li>Drawing, writing</li>
-                        <li>Programming</li>
-                        <li>Crafts: crochet, electronics</li>
-                        <li>Animations, games, websites</li>
-                    </ul>
-                </li>
-                <li>Embodiment/Leisure
-                    <ul>
-                        <li>Reading</li>
-                        <li>Bookbinding</li>
-                        <li>Dance, movement</li>
-                    </ul>
-                </li>
-                <li>Excitement/Appreciation/Care
-                    <ul>
-                        <li>Birds, plant life</li>
-                        <li>Cooking</li>
-                        <li>Shell scripting</li>
-                        <li>Visible mending</li>
-                    </ul>
-                </li>
-                <li>21st Century Humanity
-                    <ul>
-                        <li>Why is credit?</li>
-                        <li>How: taxes (and is the IRS unfairly dragged?)</li>
-                        <li>How does debt work? (both national and personal scale)</li>
-                    </ul>
-                </li>
-            </ol>
-        </article>
+        <nav>&lt;&lt; <a href="https://liuleslie.github.io/index">Homepage</a></nav>
+        <div style="width:30vw;height:30vh" class="draggable" id="p5Container"></div>
 
-        <article>
-            <h3>A Musing</h3>
-            <p></p>
-        </article>
-       
-        <table style="margin-top: 3em;">
-            <tr>
-                <th>undertaking</th>
-                <th>description</th>
-                <th>target</th>
-                <th>schedule</th>
-            </tr>
-            <tr>
-                <td>Accessible Design (Udemy)</td>
-                <td>accessibility basics for digital design</td>
-                <td>In-House Digital Design Guide</td>
-                <td>making my way through section 3, on color</td>
-            </tr>
-            <tr>
-                <td>GSAP</td>
-                <td>small starter course + read through documentation</td>
-                <td>Design X Code R&D: motion studies. Built on Phos?</td>
-                <td>started course; find time for it</td>
-            </tr>
-            <tr>
-                <td><a href="sol.html">Shapes of Language</a></td>
-                <td>poetic transcripts/subtitles</td>
-                <td>creative coding practice, multisensory design sketch</td>
-                <td>on hold, janky base done</td>
-            </tr>
-            <tr>
-                <td>ACM posters</td>
-                <td>history of computing via generative posters</td>
-                <td>practicing resilience</td>
-                <td>deadline: July</td>
-            </tr>
-            <tr>
-                <td>fam posters</td>
-                <td>arranging mottos for mom.</td>
-                <td>resilience! determination!!</td>
-                <td>ASAP</td>
-            </tr>
-            <tr>
-                <td>Fresh Not Frozen: v2</td>
-                <td>speculative artifacts</td>
-                <td>testing out a sprint.</td>
-                <td>on hold</td>
-            </tr>
-            <tr>
-                <td>ZLNRBQB</td>
-                <td>zines? MY connection</td>
-                <td>understanding research process</td>
-                <td>on hold</td>
-            </tr>
-            <tr>
-                <td>Digital Design Guide</td>
-                <td>principles, standards, and guidelines for accessible, engaging experiential design.</td>
-                <td>learning about creative tech.</td>
-                <td>ongoing</td>
-            </tr>
-        </table>
-
-        <!-- <a href="garblang.html">garbage language</a><br>
-        <a href="myth.html">mythologies</a> -->
-        
     </body>
 </html>
