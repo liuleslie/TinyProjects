@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+    <style>
+        body {margin:0}
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <script>
+        let mic;
+        let capture;
+        let ww = window.innerWidth;
+        let wh = window.innerHeight;
+        let cw = ww*.25;
+        let ch = wh*.25;
+
+        function setup() {
+            let c = createCanvas(ww,wh);
+            c.mouseMoved(userStartAudio);
+            
+            colorMode(RGB,255);
+            capture = createCapture(VIDEO);
+            capture.size(cw,ch);
+            capture.hide();
+            
+            mic = new p5.AudioIn();
+            mic.start();
+        }
+
+        function draw() {
+            cursor('grab');
+
+            let l = mic.getLevel();
+            console.log(l);
+            // background(255);
+
+            // let xSpeed = abs(mouseX-pmouseX)*.5;
+            // let ySpeed = abs(mouseY-pmouseY)*.5;
+
+            let myCapW = cw*l*100;
+            let myCapH = ch*l*100;
+
+            let myCapX = (ww/2)-(myCapW/2);
+            let myCapY = (wh/2)-(myCapH/2);
+
+            image(capture,myCapX,myCapY,myCapW,myCapH);
+
+            if (mouseIsPressed) {
+                cursor('grabbing');
+                // fill('red');
+                // noStroke();
+                // ellipse(mouseX,mouseY,wh*l,wh*l);
+                filter(THRESHOLD,l*15);
+            }
+            // image(capture,mouseX-(cw/2),mouseY-(ch/2),cw*xSpeed,ch*ySpeed);
+        }
+
+        function mouseReleased() {
+            // erase
+            erase();
+        }
+        function windowResized() {
+            resizeCanvas(windowWidth,windowHeight);
+        }
+
+    </script>
+  </body>
+</html>

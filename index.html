@@ -22,36 +22,41 @@
             body {
                 font-family: karrik;
                 background-color:rgb(181, 181, 181);
-                margin:2em 5em 3em 5em;
-                font-size: 18px;
+                margin:1em;
+                font-size: 40px;
             }
             nav {margin-bottom:2em}
             a { color: blue; text-decoration: none;}
             a:hover {background-color: yellow;color:black}
             div, figure, iframe { width:33vw;height:33vh; border: 3px black dotted;}
             iframe {margin-right:2em; margin-bottom: 2em}
-            h3 { font-weight: normal; text-decoration: 2px black underline;}
+            h3 { font-size: 1em; font-weight: normal; text-decoration: 4px black underline;}
             @media (max-width: 600px) {
                 body {
-                    margin:1em;
+                    body {font-size:15px;}
+                    h3 {text-decoration:2px black underline}
                 }
                 iframe {
                     width:75vw;
                     height:75vw;
                 }
             }
+            .woo:hover {text-transform: uppercase;cursor:grab}
         </style>
     </head>
     <body>
         <nav>&lt;&lt; <a href="https://liuleslie.github.io/index">Homepage</a></nav>
 
-        <p>Unfortunately this page is mobile-hostile (for now!!)</p>
+        <h3><span class="woo">O</span><span class="woo">n</span><span class="woo">e</span> <span class="woo">W</span><span class="woo">e</span><span class="woo">e</span><span class="woo">k</span> <span class="woo">o</span><span class="woo">f</span> <span class="woo">B</span><span class="woo">r</span><span class="woo">u</span><span class="woo">s</span><span class="woo">h</span> <span class="woo">T</span><span class="woo">o</span><span class="woo">o</span><span class="woo">l</span><span class="woo">s</span> <span style="font-family:fantasy;font-weight:bold">(July 2–8)</span></h3>
 
-        <h3>One Week of Brush Tools (7/2–8)</h3>
-        <p>sketch 3 (audio input) does not work in Firefox... but why?</p>
-        <iframe scrolling="no" src="tp/sketch1.html"></iframe>
-        <iframe scrolling="no" src="tp/sketch2.html"></iframe>
-        <iframe scrolling="no" src="tp/sketch3.html"></iframe>
+        <ol>
+            <li><a href="tp/sketch1.html" target="popup" onclick="window.open('tp/sketch1.html','popup'); return false;">Position</a></li>
+            <li><a href="tp/sketch2.html" target="popup" onclick="window.open('tp/sketch2.html','popup'); return false;">Speed</a></li>
+            <li><a href="tp/sketch3.html" target="popup" onclick="window.open('tp/sketch3.html','popup'); return false;">Audio</a> <span style="font-size:.5em">(wonky in Firefox... unsure why)</span></li>
+            <li><a href="tp/sketch4.html" target="popup" onclick="window.open('tp/sketch4.html','popup'); return false;">Anti-brush</a></li>
+            <li><a href="tp/sketch5.html" target="popup" onclick="window.open('tp/sketch5.html','popup'); return false;">Webcam 🤝 Audio</a> <span style="font-size:.5em">(FLASHING IMAGES WARNING)</span></li>
+            
+        </ol>
     </body>
 </html>
 
